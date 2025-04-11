@@ -1,0 +1,29 @@
+<section *ngIf="showSection === true; else certificatesDisplay" id="skillsAndCertificates" class="max-w-[1200px] mx-auto mb-22 animate__animated animate__fadeIn">
+    <h1 class="text-2xl text-center mb-12 underline hover:animate-bounce mx-auto w-max">Skills</h1>
+    <div id="skills_container" class="flex flex-wrap justify-evenly items-center gap-7 gap-y-8">
+        <div *ngFor="let skill of skills" class="progress_container text-center w-90 mx-auto outline-1 outline-offset-8 outline-gray-500/50 rounded-md">
+            <p class="font-semibold font-title">{{ skill.name }}</p> 
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div class="bg-blue-600 h-2.5 rounded-full skills_bar w-[0%] animate-pulse" [style.width]="skill.level + '%'"></div>
+            </div>   
+        </div>
+    </div>
+</section>
+<ng-template #certificatesDisplay>
+    <section class="max-w-[1200px] mx-auto mb-22 animate__animated animate__fadeIn">
+        <h1 class="text-2xl text-center mb-12 underline hover:animate-bounce mx-auto w-max">Certificados</h1>
+        <div id="certificates_container" class="flex flex-wrap justify-center items-center gap-7">
+            <a *ngFor="let certificate of certificates" [href]="certificate.url" target="_blank" class="block text-center md:w-auto md:max-w-sm max-w-full w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ certificate.name }}</h5>
+            </a>
+        </div>
+    </section>
+</ng-template>
+
+<div id="toggle-showSection" class="text-center mb-20"> <!-- Toggle Btn Skills/Certificates -->
+    <label class="inline-flex items-center me-5 hover:outline-1 outline-offset-8 outline-gray-500/50 bg-gray-500 hover:bg-gray-400/75 p-5 rounded-md cursor-pointer">
+        <input type="checkbox" id="btn_toggle" class="sr-only peer" [checked]="showSection ? false : true">
+        <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-red-300 dark:peer-focus:ring-red-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-600 dark:peer-checked:bg-red-600"></div>
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"> {{ showSection ? 'Skills' : 'Certificados' }} </span>
+    </label>
+</div>
