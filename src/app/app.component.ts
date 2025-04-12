@@ -19,7 +19,8 @@ export class AppComponent {
    document.addEventListener('DOMContentLoaded', (e) => {
     setTimeout(() => {
       this.PAGE_STATUS.status = true;
-    }, 350);
+      console.clear();
+    }, 500);
    })
   }
 }

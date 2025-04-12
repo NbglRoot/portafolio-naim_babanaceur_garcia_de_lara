@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
       triggerType: 'hover',
       offset: 10,
   };
-
   new Popover(img_hero_target, img_hero, optionsPopover)
   }
 }
