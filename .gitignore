@@ -1,6 +1,8 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
+/dist
+!/dist/portafolio-naim_babanaceur_garcia_de_lara/
 /tmp
 /out-tsc
 /bazel-out
