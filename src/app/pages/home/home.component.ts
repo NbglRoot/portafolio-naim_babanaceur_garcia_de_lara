@@ -5,9 +5,10 @@ import { ProjectsDisplayComponent } from "../../components/projects-display/proj
 import { AboutNgdlComponent } from '../../components/about-ngdl/about-ngdl.component';
 import { ContactFormComponent } from '../../components/contact-form/contact-form.component';
 import { ExperiencesDisplayComponent } from "../../components/experiences-display/experiences-display.component";
+import { ArrowTopPageComponent } from "../../components/arrow-top-page/arrow-top-page.component";
 @Component({
   selector: 'app-home',
-  imports: [SkillsCertificatesSectionComponent, ProjectsDisplayComponent, AboutNgdlComponent, ContactFormComponent, ExperiencesDisplayComponent],
+  imports: [SkillsCertificatesSectionComponent, ProjectsDisplayComponent, AboutNgdlComponent, ContactFormComponent, ExperiencesDisplayComponent, ArrowTopPageComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -1,3 +1,28 @@
+/* Skill Card Animation */
+.skill-container:nth-child(odd) {
+    animation: skill-card 1.35s ease-in-out forwards;
+}
+.skill-container {
+    animation: skill-card 1.2s ease-in-out forwards;
+    transition: opacity 1s;
+}
+
+@keyframes skill-card {
+    0% {
+        translate: 60px 0;
+    }
+    50% {
+        translate: -60px 0;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+
+/* Progress Bar Animation */
+.skill-container:nth-child(even) .progress_bar_animation {
+    animation: skill-bar 2.75s ease-in-out forwards;
+}
 .progress_bar_animation {
     animation: skill-bar 2s ease-in-out forwards;
 }

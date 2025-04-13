@@ -11,54 +11,55 @@ export class SkillsCertificatesSectionComponent implements OnInit {
   showSection = true;
 
   ngOnInit(): void {
-    this.showSection = sessionStorage.getItem('showSection') === 'true';
-   (document.querySelector('#toggle-showSection #btn_toggle') as HTMLInputElement)?.addEventListener('change', (e) => {
-    e.preventDefault();
-    this.showSection = !this.showSection;
-    sessionStorage.setItem('showSection', this.showSection.toString());
-   })
-   window.addEventListener('scroll', () => {
-    const all_skills_bars = document.querySelectorAll('.skills_bar') as NodeListOf<HTMLDivElement>
-    switch(true) {
-      // desktop animation
-      case window.innerWidth > 1175:
-        if(window.scrollY >= 125) {
-          all_skills_bars.forEach(bar => {
-            bar.classList.add('progress_bar_animation')
-            bar.classList.add('progress_bar_animation')
-          })
-        }
-      break;
-      // tablet animation
-      case window.innerWidth <= 1175:
-        if(window.scrollY >= 200) {
-          all_skills_bars.forEach(bar => {
-            bar.classList.add('progress_bar_animation')
-            bar.classList.add('progress_bar_animation')
-          })
-        }
-      break;
-      // mobile animation
-      case window.innerWidth <= 768:
-        if(window.scrollY >= 594) {
-          all_skills_bars.forEach(bar => {
-            bar.classList.add('progress_bar_animation')
-            bar.classList.add('progress_bar_animation')
-          })
-        }
-      break;
-    }
-   })
+    this.initSKillCards();
+    (document.querySelector('#toggle-showSection #btn_toggle') as HTMLInputElement)?.addEventListener('change', (e) => {
+      e.preventDefault();
+      this.showSection = !this.showSection;
+      if(this.showSection) {
+        this.initSKillCards();
+      }
+    })
   }
+
+  initSKillCards() {
+    let skillsContainer: NodeListOf<HTMLElement>;
+    let progressBars: NodeListOf<HTMLElement>;
+    setTimeout(() => {
+      progressBars = document.querySelectorAll('.skills_bar') as NodeListOf<HTMLElement>
+      skillsContainer = document.querySelectorAll('.progress_container') as NodeListOf<HTMLElement>
+    }, 100);
+    const observerCard = new IntersectionObserver(elements => {
+    elements.forEach(card => {
+      if(card.isIntersecting && this.showSection) {
+        card.target.classList.remove('opacity-0')
+        card.target.classList.add('opacity-100')
+        card.target.classList.add('skill-container')
+      }
+    })
+   })
+    const observerBar = new IntersectionObserver(elements => {
+    elements.forEach(bar => {
+      if(bar.isIntersecting && this.showSection) {
+        bar.target.classList.add('progress_bar_animation');
+      }
+    })
+   })
+   setTimeout(() => {
+     progressBars.forEach(bar => observerBar.observe(bar))
+     skillsContainer.forEach(card => observerCard.observe(card))
+   }, 200);
+  }
+
   skills = [
-    { name: 'ANGULAR', level: 90 },
-    { name: 'GIT', level: 95 },
-    { name: 'TAILWIND', level: 94 },
-    { name: 'BOOTSTRAP', level: 98 },
-    { name: 'TYPESCRIPT', level: 97 },
-    { name: 'LAYOUT RESPONSIVO', level: 94 },
-    { name: 'HTML5', level: 99 },
-    { name: 'CSS3', level: 96 },
+    { name: 'ANGULAR', level: 90, icon: 'fab fa-angular' },
+    { name: 'GIT', level: 95, icon: 'fab fa-git' },
+    { name: 'TAILWIND', level: 94, icon: 'fab fa-css3-alt' },
+    { name: 'BOOTSTRAP', level: 98, icon: 'fab fa-bootstrap' },
+    { name: 'TYPESCRIPT', level: 97, icon: 'fa-solid fa-t' },
+    { name: 'REACT', level: 75, icon: 'fab fa-react' },
+    { name: 'LAYOUT RESPONSIVO', level: 94, icon: 'fa-solid fa-tablet-screen-button' },
+    { name: 'HTML5', level: 99, icon: 'fab fa-html5' },
+    { name: 'CSS3', level: 96, icon: 'fab fa-css3' },
   ];
   certificates = [
     {

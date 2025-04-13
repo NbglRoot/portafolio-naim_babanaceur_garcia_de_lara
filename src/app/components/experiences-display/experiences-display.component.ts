@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,7 +7,20 @@ import { CommonModule } from '@angular/common';
   templateUrl: './experiences-display.component.html',
   styleUrl: './experiences-display.component.css'
 })
-export class ExperiencesDisplayComponent {
+export class ExperiencesDisplayComponent implements OnInit {
+
+  ngOnInit() {
+    const section = document.querySelector('#experiences-section') as HTMLElement
+    const observer = new IntersectionObserver(elements => {
+      elements.forEach(element => {
+        if(element.isIntersecting) {
+          element.target.classList.add('animate__animated', 'animate__slideInLeft');
+        }
+      })
+    })
+    observer.observe(section)
+  }
+
   experiences = [
     {
       title: 'Desarrollador FullStack y Diseñador, WikiRoot',

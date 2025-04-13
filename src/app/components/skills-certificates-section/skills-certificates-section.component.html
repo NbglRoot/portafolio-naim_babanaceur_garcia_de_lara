@@ -1,10 +1,10 @@
-<section *ngIf="showSection === true; else certificatesDisplay" id="skillsAndCertificates" class="max-w-[1200px] mx-auto mb-22 animate__animated animate__fadeIn">
+<section *ngIf="showSection === true; else certificatesDisplay"  id="skillsAndCertificates" class=" max-w-[1200px] mx-auto mb-22 animate__animated animate__fadeIn">
     <h1 class="text-2xl text-center mb-12 underline hover:animate-bounce mx-auto w-max">Skills</h1>
-    <div id="skills_container" class="flex flex-wrap justify-evenly items-center gap-7 gap-y-8">
-        <div *ngFor="let skill of skills" class="progress_container text-center w-90 mx-auto outline-1 outline-offset-8 outline-gray-500/50 rounded-md">
-            <p class="font-semibold font-title">{{ skill.name }}</p> 
+    <div id="skills_container" class="flex max-w-[850px] mx-auto flex-wrap justify-center items-center gap-7 gap-y-8">
+        <div *ngFor="let skill of skills" [title]="skill.name" class="progress_container cursor-cell opacity-0 transition-all duration-300 hover:backdrop-blur-md hover:scale-105 bg-gradient-to-b from-gray-300 to-gray-800 hover:from-gray-600 hover:to-gray-950 text-center w-32 mx-auto outline-1 outline-offset-8 outline-gray-500/50 rounded-md">
+            <i class="{{ skill.icon }} text-7xl mb-3 mt-3 transition duration-100"></i>
             <div class="w-full rounded-full h-2.5 bg-gray-700">
-                <div class="bg-blue-600 h-2.5 rounded-full skills_bar w-[0%] animate-pulse" [style.width]="skill.level + '%'"></div>
+                <div class="bg-blue-600 h-2.5 rounded-full skills_bar animate-pulse w-0" [style.width]="skill.level + '%'"></div>
             </div>   
         </div>
     </div>
