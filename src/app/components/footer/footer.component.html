@@ -1,8 +1,13 @@
-<footer class="mb-8 sm:mb-0">
-    <img src="./assets/images/logo.png" alt="logo" class="hidden sm:block size-14 mx-auto mb-5 border border-gray-700 rounded-md">
-    <p class="w-full text-justify text-[13px] leading-relaxed text-gray-400">
+<footer class="mb-12 sm:mb-0">
+    <img src="./assets/images/logo.png" alt="logo" class="hidden sm:block size-10 mx-auto mb-3 border border-gray-700 rounded-md">
+    <p *ngIf="pageLanguage === 'es'" class="w-full text-justify text-[13px] leading-relaxed text-gray-400">
         Este portafolio está desarrollado con <a href="https://angular.io/" target="_blank" class="text-teal-300 hover:underline">Angular</a>
         y <a href="https://tailwindcss.com/" target="_blank" class="text-teal-300 hover:underline">Tailwind CSS</a>,
         combinando la potencia de un framework robusto para el desarrollo frontend con un framework de CSS utilitario para crear interfaces modernas y responsivas.
+    </p>
+    <p *ngIf="pageLanguage === 'en'" class="w-full text-justify text-[13px] leading-relaxed text-gray-400">
+        This portfolio is developed with <a href="https://angular.io/" target="_blank" class="text-teal-300 hover:underline">Angular</a>
+        and <a href="https://tailwindcss.com/" target="_blank" class="text-teal-300 hover:underline">Tailwind CSS</a>,
+        combining the power of a robust framework for frontend development with a CSS framework for creating modern and responsive interfaces.
     </p>
 </footer>
