@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { SkillsCertificatesSectionComponent } from '../../components/skills-certificates-section/skills-certificates-section.component';
 import { Popover, type PopoverOptions } from 'flowbite';
-import { ProjectsDisplayComponent } from "../../components/projects-display/projects-display.component";
+import { SkillsCertificatesSectionComponent } from '../../components/skills-certificates-section/skills-certificates-section.component';
+import { ExperiencesDisplayComponent } from '../../components/experiences-display/experiences-display.component';
+import { ProjectsDisplayComponent } from '../../components/projects-display/projects-display.component';
 import { AboutNgdlComponent } from '../../components/about-ngdl/about-ngdl.component';
 import { ContactFormComponent } from '../../components/contact-form/contact-form.component';
-import { ExperiencesDisplayComponent } from "../../components/experiences-display/experiences-display.component";
-import { ArrowTopPageComponent } from "../../components/arrow-top-page/arrow-top-page.component";
+import { ArrowTopPageComponent } from '../../components/arrow-top-page/arrow-top-page.component';
 @Component({
-  selector: 'app-home-es',
-  imports: [SkillsCertificatesSectionComponent, ProjectsDisplayComponent, AboutNgdlComponent, ContactFormComponent, ExperiencesDisplayComponent, ArrowTopPageComponent],
+  selector: 'app-home',
+  imports: [SkillsCertificatesSectionComponent, ExperiencesDisplayComponent, ProjectsDisplayComponent, AboutNgdlComponent, ContactFormComponent, ArrowTopPageComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

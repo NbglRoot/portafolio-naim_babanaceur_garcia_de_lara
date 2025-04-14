@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { FooterComponent } from "../footer/footer.component";
 
 @Component({
@@ -9,13 +9,57 @@ import { FooterComponent } from "../footer/footer.component";
   templateUrl: './side-header.component.html',
   styleUrl: './side-header.component.css'
 })
-export class SideHeaderComponent {
-  SIDE_BAR_OPTIONS = [
+export class SideHeaderComponent implements OnInit {
+  language: string = 'es';
+  
+  ngOnInit(): void {
+    switch (localStorage.getItem('language')) {
+      case 'en':
+        this.language = 'en';
+        this.SIDE_BAR_OPTIONS = this.SIDE_BAR_OPTIONS_EN;
+        this.router.navigate(['/en/home']);
+        break;
+      default:
+        this.language = 'es';
+        this.SIDE_BAR_OPTIONS = this.SIDE_BAR_OPTIONS_ES;
+        break;
+    }
+  }
+
+  constructor(private router: Router) {}
+
+
+  goToRoute(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    const selectedValue = target.value;
+    this.language = selectedValue;
+    
+    if(selectedValue === 'en') {
+      this.router.navigate(['/en/home']);
+      this.SIDE_BAR_OPTIONS = this.SIDE_BAR_OPTIONS_EN;
+      localStorage.setItem('language', 'en');
+    } else {
+      this.router.navigate(['']);
+      this.SIDE_BAR_OPTIONS = this.SIDE_BAR_OPTIONS_ES;
+      localStorage.setItem('language', 'es');
+    }
+  }
+
+  
+  SIDE_BAR_OPTIONS_ES = [
     { title: 'Inicio', path: '/inicio', icon: 'house' },
     { title: 'Sobre mí', path: '/sobre-mi', icon: 'user' },
     { title: 'Contacta me', path: '/contacto', icon: 'envelope' }
   ]
+  
+  SIDE_BAR_OPTIONS_EN = [
+    { title: 'Home', path: '/en/home', icon: 'house' },
+    { title: 'About Me', path: '/en/about-me', icon: 'user' },
+    { title: 'Contact Me', path: '/en/contact-me', icon: 'envelope' }
+  ]
 
+  SIDE_BAR_OPTIONS: any = this.language === 'es' ? this.SIDE_BAR_OPTIONS_ES : this.SIDE_BAR_OPTIONS_EN;
+  
   myProjects = [
     {
       name: 'NimbusRoot',
