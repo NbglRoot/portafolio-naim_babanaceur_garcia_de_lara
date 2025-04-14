@@ -17,7 +17,6 @@ export class SideHeaderComponent implements OnInit {
       case 'en':
         this.language = 'en';
         this.SIDE_BAR_OPTIONS = this.SIDE_BAR_OPTIONS_EN;
-        this.router.navigate(['/en/home']);
         break;
       default:
         this.language = 'es';
