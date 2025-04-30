@@ -1,59 +1,54 @@
-# PortafolioNaimBabanaceurGarciaDeLara
+<div align="center">
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+# 🌟 Portfolio - Naim Babanaceur Garcia De Lara 🌟
 
-## Development server
+[![Angular](https://img.shields.io/badge/Angular-19.2.0-DD0031?style=for-the-badge&logo=angular)](https://angular.dev/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.3-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Flowbite](https://img.shields.io/badge/Flowbite-3.1.2-1A56DB?style=for-the-badge)](https://flowbite.com/)
 
-To start a local development server, run:
+_A modern, responsive portfolio showcasing my professional journey and technical expertise_
 
-```bash
-ng serve
+</div>
+
+## 🚀 About The Project
+
+This portfolio is a dynamic web application built with Angular 19, showcasing my professional experience, projects, and skills. It features a modern design with responsive layouts powered by TailwindCSS and enhanced UI components from Flowbite.
+
+### ✨ Key Features
+
+- 📱 Fully responsive design
+- 🎨 Modern UI/UX with TailwindCSS
+- 📄 Dynamic content sections
+- 📬 Contact form functionality
+- 🔝 Smooth scroll-to-top feature
+- 📜 Certificates showcase
+- 💼 Project portfolio display
+
+## 🛠️ Built With
+
+- **Frontend Framework:** Angular 19.2.0
+- **Styling:** TailwindCSS 4.1.3
+- **UI Components:** Flowbite 3.1.2
+- **Type Safety:** TypeScript 5.7.2
+
+## 📂 Project Structure
+
+```
+├── public/
+│   └── assets/          # Static assets (images, PDFs)
+src/
+├── app/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Page components
+│   └── styles/          # Global styles and themes
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📄 License
 
-## Code scaffolding
+Distributed under the MIT License. See `LICENSE` for more information.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<div align="center">
+Made by Naim Babanaceur Garcia De Lara
+</div>

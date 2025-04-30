@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* TailwindCSS & Flowbite */
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@theme {
+    --font-primary: "Open Sans", sans-serif;
+    --font-secondary: "Raleway", sans-serif;
+}
+
+/* Custom Styles */
+html {
+    letter-spacing: 0.25px;
+    font-family: var(--font-primary);
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(180deg, var(--color-gray-900) 65%, var(--color-gray-700) 100% );
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: linear-gradient(180deg, var(--color-gray-200) 65%, var(--color-gray-400) 100% );
+    }
+}
