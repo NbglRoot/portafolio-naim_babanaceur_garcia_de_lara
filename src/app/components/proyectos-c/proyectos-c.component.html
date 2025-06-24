@@ -1,0 +1,39 @@
+<h3
+  class="mb-12 text-center flex flex-row items-center justify-center gap-4 text-2xl font-bold font-mono underline underline-offset-4"
+>
+  <picture>
+    <source
+      srcset="./assets/images/emojis_animated/bulb.webp"
+      type="image/webp"
+    />
+    <img
+      src="./assets/images/emojis_animated/bulb.webp"
+      alt="💡"
+      width="42"
+      height="42"
+    />
+  </picture>
+  Proyectos
+</h3>
+<div
+  id="terminal-screen"
+  class="w-[325px] h-[650px] md:w-[650px] md:h-[650px] mx-auto font-mono"
+>
+  <div
+    id="terminal-output"
+    class="p-4 text-xl overflow-y-auto rounded-t-2xl"
+  ></div>
+  <form
+    (submit)="terminalSubmit($event)"
+    id="terminal-input"
+    class="border-t border-gray-800 p-1 rounded-b-2xl"
+  >
+    <input
+      type="text"
+      autocomplete="off"
+      name="terminal-input-text"
+      id="terminal-input-text"
+      class="text-white bg-black focus:outline-0 focus:border-0 border-0 focus:ring-0 w-full"
+    />
+  </form>
+</div>

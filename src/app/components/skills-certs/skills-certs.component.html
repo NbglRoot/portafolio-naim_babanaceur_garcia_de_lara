@@ -1,0 +1,84 @@
+<h3
+  class="text-center flex flex-row items-center justify-center gap-4 underline underline-offset-4 text-2xl font-bold font-mono mb-14"
+>
+  <picture>
+    <source
+      srcset="./assets/images/emojis_animated/hat.webp"
+      type="image/webp"
+    />
+    <img
+      src="./assets/images/emojis_animated/hat.webp"
+      alt="🎓"
+      width="42"
+      height="42"
+    />
+  </picture>
+  Skills & Certificados
+</h3>
+<ol
+  id="skills-certs-list"
+  class="opacity-0 flex flex-row flex-wrap {{
+    gapSec
+  }} justify-center items-center"
+>
+  <li *ngFor="let entry of display">
+    <i
+      *ngIf="toggleText === 'Skills'"
+      attr.data-tooltip-target="tooltip-no-{{ entry.name }}"
+      [id]="entry.name"
+      [title]="entry.name"
+      [ngClass]="entry.icon"
+      class="text-4xl sm:text-6xl p-4 bg-gradient-to-t from-gray-800 to-transparent rounded-md cursor-cell hover:bg-gray-700 hover:scale-105 hover:rotate-4 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-700 transition duration-150"
+    ></i>
+    <a
+      *ngIf="toggleText === 'Certificados'"
+      [title]="entry.name"
+      [href]="entry.url"
+      target="_blank"
+      class="text-sm md:text-xl lg:text-2xl font-bold font-mono m-4 px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-700 transition-colors duration-300"
+      >{{ entry.name.slice(0, 25) }}...</a
+    >
+  </li>
+</ol>
+
+<!-- Tooltips -->
+<div
+  *ngFor="let entry of skills"
+  attr.id="tooltip-no-{{ entry.name }}"
+  role="tooltip"
+  class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700"
+>
+  {{ entry.name }}
+  <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
+
+<!-- Toggle Skills / Certs -->
+<div id="section-tog" class="opacity-0 text-center mt-20">
+  <label class="inline-flex items-center cursor-pointer mx-auto">
+    <i id="section-tog-i" class="fa-solid fa-caret-right mr-6 animate-ping"></i>
+
+    <input (change)="toggle()" type="checkbox" value="" class="sr-only peer" />
+    <div
+      class="relative w-11 h-6 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-800 rounded-full peer bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all border-gray-600 peer-checked:bg-blue-600"
+    ></div>
+    <span class="ms-3 text-sm font-medium text-gray-300">{{ toggleText }}</span>
+  </label>
+</div>
+
+<div
+  id="statistics-git"
+  class="flex flex-row flex-wrap gap-6 justify-center items-center mt-12"
+>
+  <img
+    class="opacity-0"
+    src="https://github-readme-stats.vercel.app/api/top-langs?username=NbglRoot&amp;locale=en&amp;hide_title=false&amp;layout=compact&amp;card_width=320&amp;langs_count=5&amp;theme=dracula&amp;hide_border=false"
+    height="150"
+    alt="languages graph"
+  />
+  <img
+    class="opacity-0"
+    src="https://github-readme-stats.vercel.app/api?username=NbglRoot&amp;hide_title=false&amp;hide_rank=false&amp;show_icons=true&amp;include_all_commits=true&amp;count_private=true&amp;disable_animations=false&amp;theme=dracula&amp;locale=en&amp;hide_border=false"
+    height="150"
+    alt="stats graph"
+  />
+</div>

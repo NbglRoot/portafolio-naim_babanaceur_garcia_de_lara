@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portafolio | Naim Babanaceur Garcia De Lara</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Essential Meta Tags -->
+    <meta charset="utf-8" />
+    <base href="/portafolio-naim_babanaceur_garcia_de_lara/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO Meta Tags -->
+    <title>Portafolio | Naim Babanaceur Garcia De Lara</title>
+    <meta
+      name="description"
+      content="Portafolio de Naim Babanaceur Garcia De Lara, donde podrás ver mis proyectos, habilidades y experiencia"
+    />
+    <meta name="keywords" content="Angular, React, Front-End Developer" />
+    <meta name="author" content="Naim Babanaceur Garcia De Lara" />
+
+    <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Portafolio | Naim Babanaceur Garcia De Lara"
+    />
+    <meta
+      property="og:description"
+      content="Portafolio de Naim Babanaceur Garcia De Lara, donde podrás ver mis proyectos, habilidades y experiencia"
+    />
+    <meta property="og:image" content="./open_graph_image.png" />
+    <meta
+      property="og:url"
+      content="https://nbglroot.github.io/portafolio-naim_babanaceur_garcia_de_lara/inicio"
+    />
+    <meta
+      property="og:site_name"
+      content="Portafolio | Naim Babanaceur Garcia De Lara"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="./favicon.png" sizes="any" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./favicon.png" />
+
+    <!-- Robots Directives -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Additional -->
+    <meta name="color-scheme" content="dark" />
+  </head>
+  <body id="loading-page">
+    <div
+      id="background-canvas"
+      class="opacity-0 transition-all duration-500"
+    ></div>
+    <app-root></app-root>
+
+    <!-- Font Awesome | Icons Kit -->
+    <script
+      src="https://kit.fontawesome.com/259098186a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Load Three.js and Vanta.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          document
+            .getElementById("background-canvas")
+            .classList.remove("opacity-0");
+          document
+            .getElementById("background-canvas")
+            .classList.add("opacity-100");
+          VANTA.WAVES({
+            el: "#background-canvas",
+            mouseControls: false,
+            touchControls: false,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            zoom: 0.65,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0x0,
+            shininess: 34.0,
+            waveHeight: 19.0,
+            waveSpeed: 0.95,
+          });
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>

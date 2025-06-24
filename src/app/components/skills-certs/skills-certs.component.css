@@ -1,0 +1,33 @@
+.skills-certs-list {
+  list-style-type: none;
+  opacity: 0;
+  transform: translateY(-50%);
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+.toggler {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slide-in 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* github stats animation */
+.statistics-git {
+  opacity: 0;
+  transform: rotateY(90deg);
+  animation: rotate-fade 1s ease-in-out 1.25s forwards;
+}
+
+@keyframes rotate-fade {
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,274 @@
+<header
+  class="transition-all duration-500 shadow-white/5 z-30 p-6 fixed top-0 left-0 right-0"
+>
+  <nav class="max-w-[1600px] mx-auto">
+    <ul class="list-none flex justify-between items-center">
+      <li class="flex flex-row items-center justify-center gap-6">
+        <a routerLink="/inicio"
+          ><img
+            class="rounded-md shadow-md shadow-white/20 hover:-rotate-4 hover:shadow-white/40 transition-all duration-300"
+            src="./favicon.png"
+            width="52px"
+            height="52px"
+            alt="Icono de Naim Babanaceur"
+          />
+        </a>
+        <time
+          class="hidden lg:block text-center font-bold font-mono tracking-wider"
+          >{{ currentWorldTime | date : "medium" }}</time
+        >
+        <time
+          class="block sm:hidden md:hidden text-center font-bold font-mono tracking-wider"
+          >{{ currentWorldTime | date : "short" }}</time
+        >
+      </li>
+      <li class="hidden md:block">
+        <ul class="flex justify-center items-center gap-6">
+          <li class="me-2">
+            <a
+              routerLink="/inicio"
+              routerLinkActive="border-b-2 [&>svg]:text-gray-200"
+              id="inicio-page"
+              class="inline-flex items-center justify-center p-4 border-b-0 transition-all duration-100 rounded-t-lg hover:text-gray-600 hover:border-b-2 border-gray-300 hover:[&>svg]:text-gray-200 dark:hover:text-gray-300 group"
+            >
+              <svg
+                class="w-6 h-6 me-2 text-gray-400 dark:text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+
+              Inicio
+            </a>
+          </li>
+          <li class="me-2">
+            <a
+              routerLink="/sobre-mi"
+              routerLinkActive="border-b-2 [&>svg]:text-gray-200"
+              id="sobre-mi-page"
+              class="inline-flex items-center justify-center p-4 border-b-0 transition-all duration-100 rounded-t-lg hover:text-gray-600 hover:border-b-2 border-gray-300 hover:[&>svg]:text-gray-200 dark:hover:text-gray-300 group"
+            >
+              <svg
+                class="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"
+                />
+              </svg>
+              Sobre Mí
+            </a>
+          </li>
+          <li class="me-2">
+            <a
+              routerLink="/proyectos"
+              routerLinkActive="border-b-2 [&>svg]:text-gray-200"
+              class="inline-flex items-center justify-center p-4 border-b-0 transition-all duration-100 rounded-t-lg hover:text-gray-600 hover:border-b-2 border-gray-300 hover:[&>svg]:text-gray-200 dark:hover:text-gray-300 group"
+            >
+              <svg
+                class="w-4 h-4 me-2 text-gray-400 dark:text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
+                />
+              </svg>
+              Proyectos
+            </a>
+          </li>
+          <li class="me-2">
+            <a
+              routerLink="/contactarme"
+              routerLinkActive="border-b-2 [&>svg]:text-gray-200"
+              class="inline-flex items-center justify-center p-4 border-b-0 transition-all duration-100 rounded-t-lg hover:text-gray-600 hover:border-b-2 border-gray-300 hover:[&>svg]:text-gray-200 dark:hover:text-gray-300 group"
+            >
+              <svg
+                class="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 18 20"
+              >
+                <path
+                  d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"
+                />
+              </svg>
+              Contactos
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="block md:hidden">
+        <!-- drawer init and toggle -->
+        <div
+          id="header-drawer-btn"
+          data-drawer-target="header-drawer"
+          data-drawer-show="header-drawer"
+          data-drawer-placement="right"
+          aria-controls="header-drawer"
+          class="cursor-pointer text-center"
+        >
+          <svg
+            fill="#999"
+            class="rounded-md shadow-md shadow-white/20 hover:rotate-4 hover:shadow-white/40 transition-all duration-300"
+            width="52px"
+            height="52px"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h16v7H0V0zm2 2v3h12V2H2zM0 9h16v7H0V9zm2 2v3h12v-3H2z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- drawer flowbite | header menu component -->
+<div
+  id="header-drawer"
+  class="fixed z-40 top-0 right-0 h-screen p-4 overflow-y-auto transition-transform translate-x-full w-80"
+  tabindex="-1"
+  aria-labelledby="header-drawer-label"
+>
+  <ul class="flex justify-between">
+    <li><h3 class="text-3xl font-bold">Menú</h3></li>
+    <li>
+      <!-- drawer close button -->
+      <button
+        data-drawer-hide="header-drawer"
+        aria-controls="header-drawer"
+        class="flex cursor-pointer items-center justify-center w-10 h-10 p-2 rounded-full bg-gray-700 hover:bg-gray-600"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </li>
+  </ul>
+  <div id="drawer-body" class="p-4">
+    <ul class="flex flex-col justify-center items-center gap-6">
+      <li class="me-2">
+        <a
+          routerLink="/inicio"
+          routerLinkActive="border-b-2 [&>svg]:text-gray-200"
+          id="inicio-page"
+          class="inline-flex items-center justify-center p-4 border-b-0 rounded-t-lg hover:text-gray-600 hover:border-b-2 border-gray-300 hover:[&>svg]:text-gray-200 dark:hover:text-gray-300 group"
+        >
+          <svg
+            class="w-6 h-6 me-2 text-gray-400 dark:text-gray-500"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+
+          Inicio
+        </a>
+      </li>
+      <li class="me-2">
+        <a
+          routerLink="/sobre-mi"
+          routerLinkActive="border-b-2 [&>svg]:text-gray-200"
+          id="sobre-mi-page"
+          class="inline-flex items-center justify-center p-4 border-b-0 rounded-t-lg hover:text-gray-600 hover:border-b-2 border-gray-300 hover:[&>svg]:text-gray-200 dark:hover:text-gray-300 group"
+        >
+          <svg
+            class="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"
+            />
+          </svg>
+          Sobre mí
+        </a>
+      </li>
+      <li class="me-2">
+        <a
+          routerLink="/proyectos"
+          routerLinkActive="border-b-2 [&>svg]:text-gray-200"
+          class="inline-flex items-center justify-center p-4 border-b-0 rounded-t-lg hover:text-gray-600 hover:border-b-2 border-gray-300 hover:[&>svg]:text-gray-200 dark:hover:text-gray-300 group"
+        >
+          <svg
+            class="w-4 h-4 me-2 text-gray-400 dark:text-gray-500"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 18 18"
+          >
+            <path
+              d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
+            />
+          </svg>
+          Proyectos
+        </a>
+      </li>
+      <li class="me-2">
+        <a
+          routerLink="/contactarme"
+          routerLinkActive="border-b-2 [&>svg]:text-gray-200"
+          class="inline-flex items-center justify-center p-4 border-b-0 rounded-t-lg hover:text-gray-600 hover:border-b-2 border-gray-300 hover:[&>svg]:text-gray-200 dark:hover:text-gray-300 group"
+        >
+          <svg
+            class="w-4 h-4 me-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 18 20"
+          >
+            <path
+              d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"
+            />
+          </svg>
+          Contactos
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="drawer-footer">
+    <p class="text-center text-sm text-gray-500 p-3">
+      © 2025 Naim Babanaceur Garcia de Lara. MIT License.
+    </p>
+  </div>
+</div>

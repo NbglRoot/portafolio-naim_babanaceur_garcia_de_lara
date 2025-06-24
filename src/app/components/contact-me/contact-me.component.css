@@ -1,0 +1,28 @@
+#contact-form textarea {
+  resize: none;
+}
+
+#contact-info {
+  opacity: 0;
+  transform: translateY(-30%);
+}
+
+.contact-info-animation {
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+#contact-form {
+  opacity: 0;
+  transform: translateY(30%);
+}
+
+.contact-form-animation {
+  animation: slide-in 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

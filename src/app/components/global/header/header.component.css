@@ -1,0 +1,48 @@
+/* Header */
+header {
+  opacity: 0;
+  animation: head-in 1s ease-in-out forwards;
+}
+
+header > nav > ul time {
+  pointer-events: none;
+}
+
+#header-drawer {
+  display: grid;
+  grid-template-rows: 1fr 14fr 1fr;
+  background: rgba(14, 14, 14, 0.274);
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+header nav > ul > li:nth-child(1) {
+  transform: translateY(-200%);
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+header nav > ul > li:nth-child(2) {
+  transform: translateY(-200%);
+  animation: slide-in 1s ease-in-out 0.5s forwards;
+}
+
+header nav > ul > li:nth-child(3) {
+  transform: translateY(-200%);
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes head-in {
+  to {
+    opacity: 1;
+  }
+}

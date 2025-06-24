@@ -1,0 +1,183 @@
+<main class="p-4 xl:p-0 mt-32 sm:mt-0">
+  <!-- start :: Hero Section -->
+  <section
+    id="hero-section"
+    class="max-w-[1400px] md:h-screen lg:min-h-0 min-h-[650px] flex flex-row flex-wrap sm:flex-nowrap items-center justify-center gap-x-8 md:gap-x-16 mx-auto"
+  >
+    <div class="text-hero relative">
+      <h5 class="relative text-2xl font-bold font-mono mb-12">
+        ¡Hola, soy <br class="md:hidden" />
+        Naim Babanaceur García de Lara!
+        <span class="absolute -bottom-6 left-3 text-sm">
+          --- Front-end Developer ---
+        </span>
+      </h5>
+      <p class="text-sm lg:text-xl max-w-[800px] mt-3.5 font-mono">
+        Mi expertise se centra en Angular y React, junto con frameworks CSS como
+        Bootstrap y Tailwind, permitiéndome desarrollar interfaces responsivas y
+        modernas. <br /><br />
+        Me caracterizo por mantenerme constantemente actualizado con las últimas
+        tecnologías del sector, siempre buscando formas innovadoras de mejorar
+        mis habilidades y ofrecer soluciones más eficientes.
+      </p>
+      <ul
+        class="flex flex-row flex-wrap lg:flex-nowrap gap-2 justify-between mt-10"
+      >
+        <li>
+          <a
+            href="./assets/pdf/CV/cv_nbgl_2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-bold flex px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors duration-200"
+            >Descargar CV</a
+          >
+        </li>
+        <ul class="flex flex-row flex-wrap gap-2">
+          <li>
+            <a
+              href="https://github.com/nbglroot"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-bold px-4 py-2 flex flex-row items-center justify-center bg-gray-800 rounded-md hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fab fa-github text-xl mr-2"></i>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/naimbgdl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-bold px-4 py-2 flex flex-row items-center justify-center bg-gray-800 rounded-md hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i
+                class="fa-brands fa-linkedin text-xl mr-2"
+                aria-hidden="true"
+              ></i>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://x.com/EnderWorn_"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="text-sm font-bold px-4 py-2 flex flex-row items-center justify-center bg-gray-800 rounded-md hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i
+                class="fa-brands fa-twitter text-xl mr-2"
+                aria-hidden="true"
+              ></i>
+              /
+              <i class="fa-brands fa-x-twitter text-xl mx-2"></i> | Twitter / X
+            </a>
+          </li>
+        </ul>
+      </ul>
+      <picture class="hidden lg:block absolute -top-4 right-0">
+        <source
+          srcset="./assets/images/emojis_animated/hero-peep.webp"
+          type="image/webp"
+        />
+        <img
+          src="./assets/images/emojis_animated/hero-peep.webp"
+          alt="😶"
+          width="64"
+          height="64"
+        />
+      </picture>
+    </div>
+    <div class="hero-image mt-10 sm:mt-0">
+      <img
+        draggable="false"
+        src="./assets/images/n.png"
+        class="bg-gradient-to-t sm:rotate-1 rotate-0 from-gray-400 to-gray-800 rounded-3xl mask-b-from-75%"
+        alt="Icono de Naim Babanaceur García de Lara"
+      />
+    </div>
+  </section>
+  <!-- end :: Hero Section -->
+
+  <!-- divider :: Hero | Experience -->
+  <div
+    class="h-[4px] rounded-full mt-42 sm:mt-0 bg-gray-600 w-[80%] mx-auto"
+  ></div>
+
+  <!-- start :: Experience Section -->
+  <section
+    class="max-w-[1400px] mx-auto h-screen min-h-[750px] flex flex-row flex-wrap sm:flex-nowrap mt-32 sm:mt-0 justify-center items-center gap-x-8 md:gap-x-16"
+  >
+    <app-experiences-c></app-experiences-c>
+  </section>
+  <!-- end :: Experience Section -->
+
+  <!-- divider :: Experience | Skills -->
+  <div
+    class="h-[4px] rounded-full mt-42 sm:mt-0 bg-gray-600 w-[80%] mx-auto"
+  ></div>
+
+  <!-- start :: Skills Section -->
+  <section
+    class="max-w-[1400px] mx-auto md:h-screen lg:min-h-0 min-h-[1000px] flex flex-row flex-wrap sm:flex-nowrap mt-32 sm:mt-0 justify-center items-center gap-x-8 md:gap-x-16"
+  >
+    <app-skills-certs></app-skills-certs>
+  </section>
+  <!-- end :: Skills Section -->
+
+  <!-- divider :: Skills | Projects -->
+  <div
+    class="h-[4px] rounded-full mt-42 sm:mt-0 bg-gray-600 w-[80%] mx-auto"
+  ></div>
+
+  <!-- start :: Projects Section -->
+  <section
+    id="projects-sec"
+    class="max-w-[1400px] mx-auto md:h-screen lg:min-h-0 min-h-[1000px] flex flex-row flex-wrap sm:flex-nowrap mt-32 sm:mt-0 justify-center items-center gap-x-8 md:gap-x-16"
+  >
+    <app-proyectos-c></app-proyectos-c>
+  </section>
+  <!-- end :: Projects Section -->
+
+  <!-- divider :: Projects | About -->
+  <div
+    class="h-[4px] rounded-full mt-42 sm:mt-0 bg-gray-600 w-[80%] mx-auto"
+  ></div>
+
+  <!-- start :: About Section -->
+  <section
+    id="about-sec"
+    class="max-w-[1400px] mx-auto md:h-screen lg:min-h-0 min-h-[750px] flex flex-row flex-wrap sm:flex-nowrap mt-32 sm:mt-0 justify-center items-center gap-x-8 md:gap-x-16"
+  >
+    <app-about-me></app-about-me>
+  </section>
+  <!-- end :: About Section -->
+
+  <!-- divider :: About | Contact -->
+  <div
+    class="h-[4px] rounded-full mt-42 sm:mt-0 bg-gray-600 w-[80%] mx-auto"
+  ></div>
+
+  <!-- start :: Contact Section -->
+  <section
+    id="contact-sec"
+    class="max-w-[1400px] mx-auto md:h-screen lg:min-h-0 min-h-[750px] flex flex-row flex-wrap sm:flex-nowrap mt-32 sm:mt-0 justify-center items-center gap-x-8 md:gap-x-16"
+  >
+    <app-contact-me></app-contact-me>
+  </section>
+  <!-- end :: Contact Section -->
+
+  <!-- Footer Arrow -->
+  <app-footer-arrow></app-footer-arrow>
+</main>
+
+<!-- arrow to top -->
+<div class="fixed bottom-4 right-4 z-30">
+  <button
+    id="arrow-to_top"
+    (click)="scrollToTop()"
+    class="bg-gray-800 opacity-0 text-white py-2 px-3 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</div>

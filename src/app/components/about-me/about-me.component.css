@@ -1,0 +1,33 @@
+#aboutme-c > p {
+  transform: translateY(-60%);
+  opacity: 0;
+}
+
+#aboutme-c a {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* paragraps & anchor */
+.aboutme-c-animation > p:first-of-type {
+  animation: slide-up-aboutme 1s ease-in-out forwards;
+}
+
+.aboutme-c-animation > p:nth-of-type(2) {
+  animation: slide-up-aboutme 1s ease-in-out 0.5s forwards;
+}
+
+.aboutme-c-animation > p:last-of-type {
+  animation: slide-up-aboutme 1s ease-in-out 1s forwards;
+}
+
+.aboutme-c-animation a {
+  animation: slide-up-aboutme 1s ease-in-out 1.25s forwards;
+}
+
+@keyframes slide-up-aboutme {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

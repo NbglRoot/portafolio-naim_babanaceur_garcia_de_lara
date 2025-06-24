@@ -1,0 +1,13 @@
+#terminal-screen {
+  display: grid;
+  grid-template-rows: 14fr 1fr;
+}
+
+#terminal-output {
+  background-color: black;
+  color: white;
+}
+
+#terminal-input {
+  background-color: black;
+}

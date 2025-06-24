@@ -1,0 +1,123 @@
+<main class="p-4 xl:p-0">
+  <section
+    class="max-w-[1400px] mx-auto md:h-screen lg:min-h-0 min-h-[650px] flex flex-row flex-wrap sm:flex-nowrap justify-center items-center gap-x-8 md:gap-x-16"
+  >
+    <div class="relative text-hero">
+      <h5 class="relative text-2xl font-bold font-mono mb-12">
+        ¡Hola, soy <br class="md:hidden" />
+        Naim Babanaceur García de Lara!
+        <span class="absolute -bottom-6 left-3 text-sm">
+          --- Front-end Developer ---
+        </span>
+      </h5>
+      <p class="text-sm lg:text-xl max-w-[800px] mt-3.5 font-mono">
+        Mi expertise se centra en Angular y React, junto con frameworks CSS como
+        Bootstrap y Tailwind, permitiéndome desarrollar interfaces responsivas y
+        modernas. <br /><br />
+        Me caracterizo por mantenerme constantemente actualizado con las últimas
+        tecnologías del sector, siempre buscando formas innovadoras de mejorar
+        mis habilidades y ofrecer soluciones más eficientes.
+      </p>
+      <ul
+        class="flex flex-row flex-wrap lg:flex-nowrap gap-2 justify-between mt-10"
+      >
+        <li>
+          <a
+            href="./assets/pdf/CV/cv_nbgl_2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-bold flex px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors duration-200"
+            >Descargar CV</a
+          >
+        </li>
+        <ul class="flex flex-row flex-wrap gap-2">
+          <li>
+            <a
+              href="https://github.com/nbglroot"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-bold px-4 py-2 flex flex-row items-center justify-center bg-gray-800 rounded-md hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fab fa-github text-xl mr-2"></i>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/naimbgdl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-bold px-4 py-2 flex flex-row items-center justify-center bg-gray-800 rounded-md hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i
+                class="fa-brands fa-linkedin text-xl mr-2"
+                aria-hidden="true"
+              ></i>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://x.com/EnderWorn_"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="text-sm font-bold px-4 py-2 flex flex-row items-center justify-center bg-gray-800 rounded-md hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i
+                class="fa-brands fa-twitter text-xl mr-2"
+                aria-hidden="true"
+              ></i>
+              /
+              <i class="fa-brands fa-x-twitter text-xl mx-2"></i> | Twitter / X
+            </a>
+          </li>
+        </ul>
+      </ul>
+      <img
+        (click)="showImageBig($event)"
+        class="hidden xl:block absolute cursor-pointer top-0 bottom-0 rounded-md -left-86 shadow-md shadow-white/10"
+        width="300px"
+        height="300px"
+        src="./assets/images/nbgl_pc_me.jpg"
+        alt="Imagen de Naim Babanaceur García de Lara"
+      />
+      <img
+        (click)="showImageBig($event)"
+        class="hidden xl:block absolute cursor-pointer bg-gradient-to-b from-gray-400 to-gray-600 -top-4 bottom-0 rounded-md -right-78 shadow-md shadow-white/10"
+        width="275px"
+        height="275px"
+        src="./assets/images/n.png"
+        alt="Segunda Imagen de Naim Babanaceur García de Lara"
+      />
+    </div>
+  </section>
+
+  <div class="h-[1px] mt-42 sm:mt-0 bg-gray-800 w-full"></div>
+
+  <section
+    class="md:h-screen lg:min-h-0 min-h-[650px] max-w-[1400px] mx-auto flex flex-row flex-wrap sm:flex-nowrap mt-32 sm:mt-0 justify-center items-center gap-x-8 md:gap-x-16"
+  >
+    <app-about-me></app-about-me>
+  </section>
+
+  <div class="h-[1px] mt-42 sm:mt-0 bg-gray-800 w-full"></div>
+
+  <section
+    class="md:h-screen lg:min-h-0 min-h-[650px] max-w-[1400px] mx-auto flex flex-row flex-wrap sm:flex-nowrap mt-32 sm:mt-0 justify-center items-center gap-x-8 md:gap-x-16"
+  >
+    <app-experiences-c></app-experiences-c>
+  </section>
+
+  <app-footer-arrow></app-footer-arrow>
+</main>
+
+<!-- arrow to top -->
+<div class="fixed bottom-4 right-4 z-20">
+  <button
+    id="arrow-to_top"
+    (click)="scrollToTop()"
+    class="bg-gray-800 opacity-0 text-white py-2 px-3 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</div>

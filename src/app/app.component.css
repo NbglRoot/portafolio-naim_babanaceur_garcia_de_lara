@@ -1,0 +1,26 @@
+#welcome-text {
+  animation: slide-fade-in 1s ease-in-out forwards,
+    slide-fade-out 1s ease-in-out 1s forwards;
+}
+
+@keyframes slide-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
